@@ -8,12 +8,13 @@ version = '1.0'
 mainClassName = 'TeighaDemo'
 //mainClassName = 'test.TestDatabaseTeigha'
 run {
-    systemProperty "java.library.path", 'lib/teighajava/vc10dll'
+    systemProperty "java.library.path", 'lib/teighajava/vc10_amd64dll'
 }
 
 repositories {
-    mavenCentral()
-    flatDir dirs: 'lib/teighajava/vc10dll'
+    mavenLocal()
+    maven { url "http://oa.hnocse.com:8050/nexus/content/groups/public/" }
+    flatDir dirs: 'lib/teighajava/vc10_amd64dll'
 }
 
 dependencies {
